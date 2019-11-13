@@ -3,18 +3,52 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".GetGestureFragment">
+    tools:context=".GetGestureFragment"
 
-    <!-- TODO: Update blank fragment layout -->
-    <EditText
-        android:id="@+id/contact_edit_text"
-        android:inputType="number"
+    android:background="@color/purple_grey">
 
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
+    <!-- Creates a thin black border for the EditText
+         Added on Fri, Nov 8 -->
+    <RelativeLayout
+        android:layout_width="302dp"
+        android:layout_height="62dp"
+
+        android:background="@color/black"
+
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp">
 
-        android:hint="@string/contact_hint">
-    </EditText>
+        <!-- EditText to enter contact number
+         Only takes numbers
+         Edited on Fri, Nov 8 -->
+        <EditText
+            android:id="@+id/contact_edit_text"
+            android:background="@color/white"
+
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+
+            android:layout_centerInParent="true"
+
+            android:textSize="30sp"
+
+            android:inputType="number"
+            android:hint="@string/contact_hint">
+        </EditText>
+    </RelativeLayout>
+
+    <!-- Start Listening Button
+         Added on Fri, Nov 8 -->
+    <Button
+        android:id="@+id/start_listening_button"
+
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+
+        style="@style/button_style"
+        android:text="@string/start_listening_button_text">
+    </Button>
 
 </RelativeLayout>

@@ -1,11 +1,27 @@
 <resources>
 
-    <!-- Base application theme. -->
+    <!-- Base application theme.
+         Changed the Primary and Primary Dark colors
+         Edited on Fri, Nov 8 -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorPrimary">@color/my_blue</item>
+        <item name="colorPrimaryDark">@color/my_blue_dark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+
+    <!-- Style of all of the buttons
+         Added on Fri, Nov 8 -->
+    <style name="button_style">
+        <item name="android:layout_width">250dp</item>
+        <item name="android:layout_height">100dp</item>
+        <item name="android:background">@color/periwinkle</item>
+
+        <item name="android:textSize">25sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <!-- TODO: Add EditText error messages style -->
 
 </resources>

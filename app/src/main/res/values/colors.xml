@@ -4,7 +4,14 @@
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
 
+    <!-- Added on Wed, Nov 6 -->
     <color name="periwinkle">#A594F9</color>
     <color name="my_blue">#7371FC</color>
     <color name="purple_grey">#F5EFFF</color>
+
+    <!-- Added on Fri, Nov 8 -->
+    <color name="my_blue_dark">#5654BA</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
 </resources>
