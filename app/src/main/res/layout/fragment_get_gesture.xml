@@ -10,6 +10,8 @@
     <!-- Creates a thin black border for the EditText
          Added on Fri, Nov 8 -->
     <RelativeLayout
+        android:id="@+id/contact_edit_text_group"
+
         android:layout_width="302dp"
         android:layout_height="62dp"
 
@@ -37,6 +39,34 @@
             android:hint="@string/contact_hint">
         </EditText>
     </RelativeLayout>
+
+    <!-- Error Message TextView
+         Added on Wed, Nov 13 -->
+    <TextView
+        android:id="@+id/error_message"
+
+        android:layout_width="302dp"
+        android:layout_height="75dp"
+
+        android:layout_below="@id/contact_edit_text_group"
+        android:layout_alignLeft="@id/contact_edit_text_group"
+
+        style="@style/ErrorMessage_Text">
+    </TextView>
+
+    <!-- Listening for Gesture Animation ImageView
+         Added on Wed, Nov 13 -->
+    <ImageView
+        android:id="@+id/listening_animation"
+
+        android:layout_width="250dp"
+        android:layout_height="150dp"
+
+        android:layout_centerInParent="true"
+        android:layout_alignLeft="@id/start_listening_button"
+
+        android:visibility="invisible">
+    </ImageView>
 
     <!-- Start Listening Button
          Added on Fri, Nov 8 -->

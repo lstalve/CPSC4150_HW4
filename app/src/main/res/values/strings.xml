@@ -7,5 +7,12 @@
     <!-- Added on Fri, Nov 8 -->
     <string name="start_listening_button_text">Start Listening</string>
 
-    <!-- TODO: Add EditText error messages -->
+    <!-- Added error messages on Wed, Nov 13 -->
+    <string name="error_too_short">Phone number is too short</string>
+    <string name="error_too_long">Phone number is too long</string>
+    <string name="error_out_of_range">
+        Please enter an 11-digit phone number in this format:\n1\-123\-456\-7890  </string>
+
+    <!-- Added on Sat, Nov 16 -->
+    <string name="send_button_text">Send</string>
 </resources>

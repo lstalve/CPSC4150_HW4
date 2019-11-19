@@ -23,5 +23,10 @@
     </style>
 
     <!-- TODO: Add EditText error messages style -->
+    <style name="ErrorMessage_Text">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/red</item>
+    </style>
 
 </resources>

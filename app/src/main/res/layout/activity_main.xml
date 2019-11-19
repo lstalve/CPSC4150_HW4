@@ -4,16 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
 
-    <!-- GetGestureFragment / fragment_get_gesture.xml
-         Added on Fri, Nov 8 -->
-    <fragment
-        android:name="com.example.hw4.GetGestureFragment"
-        android:id="@+id/get_gesture_fragment"
+    android:id="@+id/fragment_container">
 
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    </fragment>
-
+    <!--Removed GetGestureFragment on Sun, Nov 17
+        When the app switched fragments, GetGestureFragment was still in the container
+        (I could click and change the EditText behind the TextView)
+        I found out that fragments added in XML could not be removed, so I added an instance of
+        GetGestureFragment in MainActivity
+        https://stackoverflow.com/questions/22474584/remove-old-fragment-from-fragment-manager-->
 </RelativeLayout>
