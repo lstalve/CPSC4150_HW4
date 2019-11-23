@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">HW4</string>
+    <string name="app_name">Gestenger</string>
 
     <!-- Added on Wed, Nov 6 -->
     <string name="contact_hint">To:</string>
@@ -15,4 +15,6 @@
 
     <!-- Added on Sat, Nov 16 -->
     <string name="send_button_text">Send</string>
+
+    <string name="refresh_button_title">Refresh Button</string>
 </resources>
