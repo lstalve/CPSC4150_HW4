@@ -56,4 +56,13 @@ public class MainActivity extends AppCompatActivity {
             fragmentTransaction.commit();
         }
     }
+
+    public void gestureDetector() {
+        GestureDetectorFragment fragment = new GestureDetectorFragment();
+        //FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+        fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.replace(R.id.fragment_container, fragment);
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commit();
+    }
 }

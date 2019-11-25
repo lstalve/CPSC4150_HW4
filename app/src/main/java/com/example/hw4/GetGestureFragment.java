@@ -5,6 +5,8 @@ import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -35,6 +37,7 @@ public class GetGestureFragment extends Fragment {
 
     // Added on Sat, Nov 16
     String contact;
+    FragmentTransaction fragmentTransaction;
 
     // Added on Wed, Nov 13
     private final int MAX_DIGITS = 11;
@@ -146,7 +149,7 @@ public class GetGestureFragment extends Fragment {
                     // Removing animation step to see if app can switch fragments and transfer the
                     // contact number successfully
                     // Edited on Sat, Nov 16
-                    transferContact(view);
+                    //transferContact(view);
 
                     //errorTV.setVisibility(View.VISIBLE);
                     //errorTV.setText("This is a valid phone number");
@@ -154,6 +157,7 @@ public class GetGestureFragment extends Fragment {
                     //listeningAnimIV.setVisibility(View.VISIBLE);
                     //listeningAnimation.start();
 
+                    switchToDetect(view);
                     //startListeningButton.setVisibility(View.INVISIBLE);
                 }
             }
@@ -169,5 +173,10 @@ public class GetGestureFragment extends Fragment {
         //remember, fragments should not talk to each other directly
         MainActivity theMainActivity = (MainActivity)getActivity();
         theMainActivity.lockContact(contact);
+    }
+
+    public void switchToDetect(View view) {
+        MainActivity mainActivity = (MainActivity)getActivity();
+        mainActivity.gestureDetector();
     }
 }
