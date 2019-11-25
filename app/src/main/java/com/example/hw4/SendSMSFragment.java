@@ -1,16 +1,22 @@
 package com.example.hw4;
 
 
+import android.app.PendingIntent;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.telephony.SmsManager;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 /**
@@ -24,6 +30,9 @@ public class SendSMSFragment extends Fragment {
     Button sendButton;
 
     String contact;
+
+    // Added on Wed, Nov 20
+    String message;
 
     public SendSMSFragment() {
         // Required empty public constructor
@@ -70,6 +79,15 @@ public class SendSMSFragment extends Fragment {
         // Attaching sendButton to send_button in fragment_send_sms.xml
         sendButton = myView.findViewById(R.id.send_button);
 
+        // Issue: This doesn't respond on the first click. It responds after the second click
+        sendButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                message = "Wassup";
+                sendSMS();
+            }
+        });
+
         return myView;
     }
 
@@ -80,5 +98,13 @@ public class SendSMSFragment extends Fragment {
         // Sets the TextView to the contact number entered
         //lockedContactTV.setText(contact);
     //}
+
+    // Added on Wed, Nov 20
+    protected void sendSMS() {
+        Uri uri = Uri.parse("smsto: " + contact );
+        Intent intent = new Intent (Intent.ACTION_SENDTO, uri);
+        intent.putExtra("sms_body", message);
+        startActivity(intent);
+    }
 
 }
