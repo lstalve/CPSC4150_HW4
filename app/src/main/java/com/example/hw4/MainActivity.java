@@ -98,13 +98,4 @@ public class MainActivity extends AppCompatActivity {
         // Commit the transaction
         fragmentTransaction.commit();
     }
-
-    public void gestureDetector(String inContact) {
-        GestureDetectorFragment fragment = GestureDetectorFragment.newInstance(inContact);
-        //FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-        fragmentTransaction = getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.replace(R.id.fragment_container, fragment);
-        fragmentTransaction.addToBackStack(null);
-        fragmentTransaction.commit();
-    }
 }

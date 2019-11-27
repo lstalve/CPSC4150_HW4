@@ -43,7 +43,6 @@ public class GetGestureFragment extends Fragment {
         // Required empty public constructor
     }
 
-
     // Edited on Wed, Nov 13
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -148,7 +147,7 @@ public class GetGestureFragment extends Fragment {
                     // contact number successfully
                     // Edited on Sat, Nov 16
                     transferContact(view);
-                    switchToDetect(view);
+
                     //errorTV.setVisibility(View.VISIBLE);
                     //errorTV.setText("This is a valid phone number");
 
@@ -170,10 +169,5 @@ public class GetGestureFragment extends Fragment {
         //remember, fragments should not talk to each other directly
         MainActivity theMainActivity = (MainActivity)getActivity();
         theMainActivity.lockContact(contact);
-    }
-
-    public void switchToDetect(View view) {
-        MainActivity mainActivity = (MainActivity)getActivity();
-        mainActivity.gestureDetector(contact);
     }
 }
